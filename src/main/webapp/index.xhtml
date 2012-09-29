@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Oh, come on...</title>
+</h:head>
+
+<h:body>
+
+	<h:form id="formTemplate" style="width: 1366px">
+		<h:commandLink value="Teste"
+			action="/public/teste.xhtml?faces-redirect=true" />
+			
+			<h:commandButton value="Teste"
+			action="/public/teste.xhtml?faces-redirect=true" />
+			<h:commandButton value="Logout"
+			action="#{loginManagedBean.doLogout}" />
+	</h:form>
+	
+	
+	<h:form id="form">  
+  
+    <p:panel id="panel" header="Teste de Bean" style="margin-bottom:10px;">  
+        
+        <h:panelGrid columns="3">  
+            <h:outputLabel value="Botão: " />  
+            <p:commandButton value="Próxima Página" id="ajax"  ajax="false" 
+             action="#{testeManagedBean.proximaPagina}" type=""/>  
+              
+            
+           
+        </h:panelGrid>  
+    </p:panel>  
+  
+    
+   
+      
+</h:form>  
+	
+	
+	
+</h:body>
+
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+
+    <!-- Linkando o Spring com o JSF -->
+    <application>
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>
+    
+    <!--  Define listener para tratar erros de login -->
+    <lifecycle>
+    	<phase-listener>com.herokuapp.portalbll.security.LoginErrorPhaseListener</phase-listener>
+    </lifecycle>
+    
+    <!-- In JSF 2.0 your faces-config.xml should use the faces-config schema version
+	2.0. Also you should remove the FaceletViewHandler shown above (if it is present)
+	as Facelets are now the default rendering technology in JSF 2. -->
+    <!-- <view-handler>com.sun.facelets.FaceletViewHandler</view-handler> -->  
+    <!--  
+    <navigation-rule>  
+        <from-view-id>/index.xhtml</from-view-id>  
+        <navigation-case>              
+            <to-view-id>/paginas/teste.xhtml</to-view-id>  
+        </navigation-case>  
+          
+    </navigation-rule>
+     --> 
+</faces-config>

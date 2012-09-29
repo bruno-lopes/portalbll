@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Oh, come on...</title>
+</h:head>
+
+<h:body>
+
+	<!-- http://www.primefaces.org/ui
+      	   http://primefaces.prime.com.tr/ui -->
+	<p:spinner />
+	<p>Login on the area!</p>
+	<h:form
+            id="loginForm"
+            prependId="false">
+            <p:message for="loginForm"/>
+            <label for="j_username">
+                <h:outputText value="Login:"/><br/>
+            </label>
+            <h:inputText
+                id="j_username"
+                required="true"
+                value="#{loginManagedBean.userId}">
+            </h:inputText>
+            <br/>
+            <label for="j_password">
+                <h:outputText value="Password:"/><br/>
+            </label>            
+            <h:inputSecret
+                id="j_password"
+                required="true">
+            </h:inputSecret>
+            <br/>
+            <label for="_spring_security_remember_me">
+                <h:outputText
+                    value="Remember me"/>
+            </label>
+            <h:selectBooleanCheckbox
+                id="_spring_security_remember_me" />
+            <br/>
+            <p:commandButton value="Login" ajax="false" action="#{loginManagedBean.doLogin}"/>
+        </h:form>
+	<h:form id="formTemplate" style="width: 1366px">
+		<h:commandLink value="Localizar Pacotes"
+			action="/public/teste.xhtml?faces-redirect=true" />
+	</h:form>
+</h:body>
+
+
+</html>
