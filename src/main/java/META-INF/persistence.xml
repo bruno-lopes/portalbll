@@ -9,9 +9,10 @@
 			<class>com.herokuapp.portalbll.entities.Usuario</class>
 	    <properties>
         	<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-	      	<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/portalbll"/>
-	      	<property name="javax.persistence.jdbc.user" value="portalbll"/>
-	      	<property name="javax.persistence.jdbc.password" value="cm0001#"/>
+	      	<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-54-243-217-44.compute-1.amazonaws.com/dtr6gqq1m4m73"/>
+	      	<property name="javax.persistence.jdbc.user" value="pmygzwxrzgmrmz"/>
+	      	<property name="javax.persistence.jdbc.password" value="aeu0rjoHBJp-QWM6MRts4bWJwn"/>
+	      	<property name="javax.persistence.jdbc.ssl" value="true"/>
 	    </properties>
 	    
 		

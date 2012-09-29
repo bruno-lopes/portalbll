@@ -27,13 +27,26 @@
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
           p:location="/WEB-INF/jdbc.properties" />
-    <bean id="dataSource"
+    
+    <bean class="java.net.URI" id="dbUrl">
+        <constructor-arg value="${DATABASE_URL}"/>
+    </bean>
+    
+     <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
+        <property name="driverClassName" value="${database.driverClassName}"/>
+        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>
+        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
+        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+    
+    
+    <!-- <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
           p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.url}"
           p:username="${jdbc.username}"
           p:password="${jdbc.password}" />
-                    
+          -->
+                     
     <!-- Persistence Configuration -->
     <bean id="entityManagerFactory"
         class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean" > 
