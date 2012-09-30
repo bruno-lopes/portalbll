@@ -89,10 +89,22 @@
         <name>Java.net</name>
         <url>https://oss.sonatype.org/content/repositories/java.net2</url>
       </repository>
+      
+	    <repository>
+   <id>EclipseLink</id>
+   <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
+</repository>
     </repositories> 
     
 
     <dependencies>
+        
+        <dependency>
+   <groupId>org.eclipse.persistence</groupId>
+   <artifactId>eclipselink</artifactId>
+   <version>2.4.0</version>
+   <scope>compile</scope>
+</dependency>
         
         <dependency>
             <groupId>com.sun.jersey</groupId>
