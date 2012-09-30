@@ -31,7 +31,7 @@
     
     
     
-    <!-- <bean class="java.net.URI" id="dbUrl">
+    <bean class="java.net.URI" id="dbUrl">
             <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
         </bean>
 
@@ -42,10 +42,10 @@
             <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
         </bean>
     
-     -->
     
     
     
+    <!-- 
     
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
@@ -54,12 +54,12 @@
           p:username="${jdbc.username}"
           p:password="${jdbc.password}" />
           
-          
+           -->
           <!-- p:url="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"
           p:username="#{ @dbUrl.getUserInfo().split(':')[0] }"
           p:password="#{ @dbUrl.getUserInfo().split(':')[1] }" />-->
           
-      
+       
                      
     <!-- Persistence Configuration -->
     <bean id="entityManagerFactory"
