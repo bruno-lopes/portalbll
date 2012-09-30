@@ -3,7 +3,7 @@
 	
 	<!-- RESOURCE_LOCAL -->
 	<persistence-unit name="portalbllPU" transaction-type="RESOURCE_LOCAL">
-	    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+	    <!-- <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
 	    <class>com.herokuapp.portalbll.entities.Permissao</class>
 			<class>com.herokuapp.portalbll.entities.TipoPermissao</class>
 			<class>com.herokuapp.portalbll.entities.Usuario</class>
