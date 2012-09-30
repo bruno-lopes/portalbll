@@ -31,7 +31,7 @@
     
     
     
-    <bean class="java.net.URI" id="dbUrl">
+    <!-- <bean class="java.net.URI" id="dbUrl">
             <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
         </bean>
 
@@ -42,34 +42,24 @@
             <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
         </bean>
     
-    
-    
-    
-    
-    <!-- <bean class="java.net.URI" id="dbUrl">
-        <constructor-arg value="${DATABASE_URL}"/>
-    </bean>
      -->
-    <!-- 
-     <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>
-        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
-        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
-        </bean>
-     -->
-    <!-- 
+    
+    
+    
+    
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
           p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.url}"
           p:username="${jdbc.username}"
           p:password="${jdbc.password}" />
-          --><!-- p:url="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"
-          p:username="#{ @dbUrl.getUserInfo().split(':')[0] }"
-          p:password="#{ @dbUrl.getUserInfo().split(':')[1] }" />
           
-      -->
+          
+          <!-- p:url="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"
+          p:username="#{ @dbUrl.getUserInfo().split(':')[0] }"
+          p:password="#{ @dbUrl.getUserInfo().split(':')[1] }" />-->
+          
+      
                      
     <!-- Persistence Configuration -->
     <bean id="entityManagerFactory"
