@@ -62,20 +62,20 @@
       
                      
     <!-- Persistence Configuration -->
-    <bean id="entityManagerFactory"
+    <!-- <bean id="entityManagerFactory"
         class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean" > 
         <property name="persistenceUnitName" value="portalbllPU"/>
     </bean>
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
     <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
-    
+     -->
     <!-- Transaction Manager Configuration -->
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+    <!-- <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
     <tx:annotation-driven />
     
-    
+     -->
     
 
     
