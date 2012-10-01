@@ -24,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService, Serializable{
     
     @Autowired
     //@Resource(name="usuarioDAO")
-    private UsuarioDAO usuarioDAO;
+    private UsuarioDAO<Usuario> usuarioDAO;
     
     
    

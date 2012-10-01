@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"  
-    xmlns:ui="http://java.sun.com/jsf/facelets"  
-    xmlns:h="http://java.sun.com/jsf/html"  
-    xmlns:f="http://java.sun.com/jsf/core"  
-    xmlns:p="http://primefaces.org/ui">  
-    <f:view contentType="text/html" ></f:view>  
-  
-  
-<h:head>  
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>   
-</h:head>   
-<h:body>  
-<p>BlahBLAH</p>
-    <h:form>  
-        <p:gmap center="-21.9868092386, -47.9268092386" zoom="15" type="ROADMAP"  style="width:600px;height:400px" />  
-        <h:messages id="msgerro"></h:messages>  
-    </h:form>  
-</h:body>  
-</html>  
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html"></f:view>
+
+
+<h:head>
+	<script type="text/javascript"
+		src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</h:head>
+<h:body>
+	<p>BlahBLAH</p>
+	<h:form id="formMenu">
+		
+
+			<p:menubar autoDisplay="true" id="menuPrincipal" rendered="true">
+				<p:menuButton value="Teste1">Teste1</p:menuButton>
+				<p:menuButton value="Teste2">Teste2</p:menuButton>
+				<p:menuButton value="Teste3">Teste3</p:menuButton>
+				<p:menuitem value="Teste4">Teste4</p:menuitem>
+			</p:menubar>
+			<p:gmap center="-21.9868092386, -47.9268092386" zoom="15"
+				type="ROADMAP" style="width:600px;height:400px" />
+			<h:messages id="msgerro"></h:messages>
+	</h:form>
+</h:body>
+</html>
